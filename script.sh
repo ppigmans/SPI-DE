@@ -27,6 +27,11 @@ cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_blue.jpg
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_red.jpg
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_green.jpg
 
+wget http://download.nomachine.com/download/5.1/Linux/nomachine_5.1.26_5_armhf.deb
+dpkg -i nomachine_5.1.26_5_armhf.deb
+https://downloads.citrix.com/10829/icaclient_13.3.0.344519_armhf.deb?__gda__=1462546621_1be24499d19ed86381eae4a1c240840f
+dpkg -i icaclient_13.3.0.344519_armhf.deb
 
+rm -rf *.deb
 exit 1
 fi
