@@ -19,5 +19,14 @@ echo "TryExec=/usr/bin/test-session" >> /usr/share/xsessions/test.desktop
 echo "Icon=" >> /usr/share/xsessions/test.desktop
 echo "Type=XSession" >> /usr/share/xsessions/test.desktop
 
+cp ./.hidden/lxde-icon.png /usr/share/lxde/images/lxde-icon.png
+cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
+
+
+cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_blue.jpg
+cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_red.jpg
+cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_green.jpg
+
+
 exit 1
 fi
