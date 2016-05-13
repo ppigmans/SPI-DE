@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Firefox" icon="/usr/share/icons/HighContrast/48x48/apps/firefox.png"><action name="Execute"><command>firefox</command></action></item>
+  <item label="Citrix" icon="/opt/Citrix/ICAClient/icons/receiver.png"><action name="Execute"><command>firefox https://portal.servicenet.nl</command></action></item>
+  <item label="IPconfig" icon="/usr/share/icons/gnome/48x48/categories/redhat-internet.png"><action name="Execute"><command> xterm -e "sh ~/.ipconfig.sh"</command></action></item>
+  <item label="Verkenner" icon="/usr/share/icons/gnome/48x48/categories/package_office.png"><action name="Execute"><command> nautilus </command></action></item>
+<!-- This requires the presence of the 'menu' package to work -->
+  <menu id="/Debian" />
+  <separator />
+  <item label="Afsluiten">
+    <action name="Execute"><command>lxsession-logout</command></action>
+  </item>
+</menu>
+
+</openbox_menu>
