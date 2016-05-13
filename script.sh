@@ -49,5 +49,6 @@ echo admin:!letmein# | chpasswd
 echo root:VmQQApeMnw4 | chpasswd
 passwd -d medewerker
 usermod -g nopasswdlogin medewerker
+echo "admin   ALL=NOPASSWD: ALL" >> /etc/sudoers
 exit 1
 fi
