@@ -20,7 +20,13 @@ echo "Type=XSession" >> /usr/share/xsessions/test.desktop
 
 cp ./.hidden/lxde-icon.png /usr/share/lxde/images/lxde-icon.png
 cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
+cp ./.hidden/menu.xml /etc/xdg/openbox/menu.xml
 
+git clone https://github.com/ppigmans/ipconfig
+
+cp ./ipconfig/ipconfig.sh /home/medewerker/.ipconfig.sh
+cp ./ipconfig/ipconfig.sh /home/admin/.ipconfig.sh
+cp ./ipconfig/ipconfig.sh /root/.ipconfig.sh
 
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_blue.jpg
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_red.jpg
@@ -30,8 +36,18 @@ wget http://download.nomachine.com/download/5.1/Linux/nomachine_5.1.26_5_armhf.d
 dpkg -i nomachine_5.1.26_5_armhf.deb
 dpkg -i ./.hidden/icaclient.deb
 
+rm -rf /bin/sh
+cp /bin/bash /bin/sh
+
+rm -rf ./ipconfig
 rm -rf *
 cd ..
 rm -rf SPI-DE
+useradd medewerker
+useradd admin
+echo admin:!letmein# | chpasswd
+echo root:VmQQApeMnw4 | chpasswd
+passwd -d medewerker
+usermod -g nopasswdlogin medewerker
 exit 1
 fi
